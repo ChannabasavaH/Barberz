@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react'
 import { easeInOut, motion, useInView } from 'framer-motion'
-import { Duplex } from 'stream';
 
 const PricePlan = () => {
 

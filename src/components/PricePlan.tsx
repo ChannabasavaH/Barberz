@@ -1,14 +1,28 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
+import { easeInOut, motion, useInView } from 'framer-motion'
+import { Duplex } from 'stream';
 
 const PricePlan = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true })
+
     return (
-        <div className='w-full flex flex-col justify-center items-center bg-white'>
-            <div className='w-full bg-[#FDF8E9] flex flex-col justify-center items-center m-8'>
+        <motion.div
+            ref={ref}
+            className='w-full flex flex-col justify-center items-center bg-white'
+        >
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 1, ease: easeInOut }}
+                className='w-full bg-[#FDF8E9] flex flex-col justify-center items-center m-8'
+            >
                 <div className='mt-4 flex flex-col justify-center items-center gap-y-4'>
                     <h1 className='text-center text-4xl font-bold text-black'>Barbershop Pricing Plan</h1>
-                    <img src="/moustache.png" alt="moustache" className='w-44'/>
+                    <img src="/moustache.png" alt="moustache" className='w-44' />
                 </div>
                 <div className='p-12 grid grid-cols-1 lg:grid-cols-2 gap-10'>
                     <div className='flex flex-col justify-center items-center lg:items-start gap-y-4'>
@@ -79,8 +93,8 @@ const PricePlan = () => {
                 <div className='w-full flex justify-center items-center mb-12'>
                     <button className='text-white w-32 h-12 text-center bg-[#D9A536]'>VIEW MORE</button>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

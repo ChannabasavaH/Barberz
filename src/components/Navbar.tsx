@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoIosMail } from "react-icons/io";
 import { FaFacebookF, FaTwitter, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
@@ -13,6 +13,17 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = "auto";
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isOpen])
 
     return (
         <div className='w-full flex flex-col justify-center items-center'>
@@ -53,9 +64,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`fixed top-0 left-0 w-full h-full bg-black text-white flex flex-col items-center justify-center gap-6 transition-transform duration-500 ${
-                    isOpen ? 'translate-x-0' : '-translate-x-full'
-                }`}
+                className={`fixed top-0 left-0 w-full h-full bg-black text-white flex flex-col items-center justify-center gap-6 transition-transform duration-500 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                    }`}
             >
                 {/* Close Icon */}
                 <button

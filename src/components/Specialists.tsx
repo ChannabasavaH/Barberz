@@ -1,8 +1,10 @@
 'use client'
 
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Specialists = () => {
+
     return (
         <div className='w-full'>
             <div className='w-full p-8 flex flex-col lg:flex-row justify-center items-center gap-10 bg-[#FDF8E9]'>
@@ -33,27 +35,18 @@ const Specialists = () => {
                     <img src="/moustache.png" alt="moustache" />
                 </div>
                 <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-x-6 mt-4 p-4'>
-                    <div>
-                        <img src="/david.png" alt="david" />
-                        <div className='flex flex-col justify-center items-center gap-y-2 bg-[#B78E36] p-4 mb-4'>
-                            <p className='text-white font-bold text-center text-3xl'>DAVID</p>
-                            <p className='font-semibold'>Hair Cut Specialists</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="/paul.png" alt="paul" />
-                        <div className='flex flex-col justify-center items-center gap-y-2 bg-[#B78E36] p-4 mb-4'>
-                            <p className='text-white font-bold text-center text-3xl'>PAUL</p>
-                            <p className='font-semibold'>Beard & Trimming</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="/charlie.png" alt="charlie" />
-                        <div className='flex flex-col justify-center items-center gap-y-2 bg-[#B78E36] p-4 mb-4'>
-                            <p className='text-white font-bold text-center text-3xl'>CHARLIE</p>
-                            <p className='font-semibold'>Hair Cut Specialists</p>
-                        </div>
-                    </div>
+                    {['david', 'paul', 'charlie'].map((name, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ y: -10, boxShadow: '0px 10px 20px rgba(0,0,0,0.3)', scale: 1.05 }}
+                            className='flex flex-col justify-center items-center'>
+                            <img src={`/${name}.png`} alt={name} />
+                            <div className='w-full flex flex-col justify-center items-center gap-y-2 bg-[#B78E36] p-4 mb-4'>
+                                <p className='text-white font-bold text-center text-3xl'>{name.toUpperCase()}</p>
+                                <p className='font-semibold'>{name === 'david' ? 'Hair Cut Specialist' : name === 'paul' ? 'Beard & Trimming' : 'Hair Cut Specialist'}</p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </div>

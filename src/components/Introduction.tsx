@@ -22,8 +22,8 @@ const Introduction = () => {
         <h1 className='text-amber-400 text-2xl font-semibold'>INTRODUCING</h1>
         <h2 className='lg:w-2/3 text-gray-700 text-4xl font-bold'>BARBERZ.. The Barbershop Since 1990</h2>
         <img src="/barber.png" alt="Barber" />
-        <p className='text-md'>Barber is a person whose occupation is mainly to cut dress groom style and shave men's and boys' hair.
-          A barber's place of work is known as a "barbershop" or a "barber's".
+        <p className='text-md'>Barber is a person whose occupation is mainly to cut dress groom style and shave men&apos;s and boy&apos;s hair.
+          A barber&apos;s place of work is known as a &ldquo;barbershop&ldquo; or a &ldquo;barber&apos;s&ldquo;.
           Barbershops are also places of social interaction and public discourse.
           In some instances, barbershops are also public forums.
         </p>

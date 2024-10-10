@@ -25,8 +25,8 @@ const Testimonials = () => {
                             <img src="/reviewImg1.png" alt="reviewImg1" />
                         </div>
                         <div className='flex flex-col justify-center items-center lg:items-start relative gap-y-6'>
-                            <p>"Just came back to home and should say that it is definitely a great experience.
-                                I would recommend it for everyone who needs a bike for a short term or want to t...”
+                            <p>&ldquo;Just came back to home and should say that it is definitely a great experience.
+                                I would recommend it for everyone who needs a bike for a short term or want to t...&ldquo;
                             </p>
                             <div className='flex flex-col justify-center items-center lg:items-start gap-y-2'>
                                 <h1 className='text-[#D9A536] font-bold text-center text-4xl'>Robert Fox</h1>
@@ -47,8 +47,8 @@ const Testimonials = () => {
                             <img src="/reviewImg2.png" alt="reviewImg2" />
                         </div>
                         <div className='flex flex-col justify-center items-center lg:items-start relative gap-y-6'>
-                            <p>"Amazing service! Claire helped me to reduce the shipping price a little
-                                and shipped it immediately after purchasing. The amethyst cave I got is a beauty and I c...”
+                            <p>&ldquo;Amazing service! Claire helped me to reduce the shipping price a little
+                                and shipped it immediately after purchasing. The amethyst cave I got is a beauty and I c...&ldquo;
                             </p>
                             <div className='flex flex-col justify-center items-center lg:items-start gap-y-2'>
                                 <h1 className='text-[#D9A536] font-bold text-center text-4xl'>Marvin McKenny</h1>

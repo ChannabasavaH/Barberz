@@ -14,7 +14,7 @@ const Blog = () => {
         <div className='w-full flex flex-col justify-center items-center bg-white'>
             <div className='w-full flex flex-col justify-center items-center gap-y-6 text-center font-bold'>
                 <h1 className='text-[#D9A536] text-lg lg:text-3xl pt-8'>NEWS FROM BLOG</h1>
-                <h2 className='text-black text-2xl lg:text-5xl'>WHAT'S ON OUR MIND</h2>
+                <h2 className='text-black text-2xl lg:text-5xl'>WHAT&apos;S ON OUR MIND</h2>
                 <img src="/moustache.png" alt="moustache" className='w-44' />
             </div>
             <motion.div
